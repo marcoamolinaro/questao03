@@ -27,6 +27,10 @@ public class Questao3 {
 		  "um número Amstrong");
 	}
 	
+	
+	/*
+	 * Calcula se um número é Amstrong
+	 */
 	private static int calcular_numero_amstrong(String numeroStr) {
 		String aux = "";
 		
