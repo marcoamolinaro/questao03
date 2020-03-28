@@ -6,7 +6,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class Questao3 {
-
+	
 	public static void main(String[] args) {
 		
 		String numeroStr = JOptionPane.showInputDialog("Digite um número inteiro:");
@@ -27,11 +27,12 @@ public class Questao3 {
 		  "um número Amstrong");
 	}
 	
+	public Questao3() {}	
 	
 	/*
 	 * Calcula se um número é Amstrong
 	 */
-	private static Long calcular_numero_amstrong(String numeroStr) {
+	public static Long calcular_numero_amstrong(String numeroStr) {
 		String aux = "";
 		
 		List<String> numeros = new ArrayList<String>();
