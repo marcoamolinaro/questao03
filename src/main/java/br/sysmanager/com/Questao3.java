@@ -11,16 +11,16 @@ public class Questao3 {
 		
 		String numeroStr = JOptionPane.showInputDialog("Digite um número inteiro:");
 		
-		Integer numero = null;
+		Long numero = null;
 
 		try {
-			numero = Integer.parseInt(numeroStr);
+			numero = Long.parseLong(numeroStr);
 		} catch (Exception e) {
 			System.out.println("Você deve digitar um núermo inteiro");
 			return;
 		}
 		
-		int amstrong = calcular_numero_amstrong(numeroStr);
+		long amstrong = calcular_numero_amstrong(numeroStr);
 		
 		System.out.println("Número digitado foi " + numero + " e" + 
 		  ((numero ==  amstrong) ? " é um " : " não é ") + 
@@ -31,7 +31,7 @@ public class Questao3 {
 	/*
 	 * Calcula se um número é Amstrong
 	 */
-	private static int calcular_numero_amstrong(String numeroStr) {
+	private static Long calcular_numero_amstrong(String numeroStr) {
 		String aux = "";
 		
 		List<String> numeros = new ArrayList<String>();
@@ -42,11 +42,11 @@ public class Questao3 {
 		}
 		
 		Integer n;
-		int soma = 0;
+		long soma = 0;
 		
 		for(String s : numeros) {
 			n = Integer.parseInt(s);
-			soma += Math.pow(n, 3);
+			soma += Math.pow((long)n, 3);
 		}
 		
 		return soma;
