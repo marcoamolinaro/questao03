@@ -16,15 +16,17 @@ public class Questao3 {
 		try {
 			numero = Long.parseLong(numeroStr);
 		} catch (Exception e) {
-			System.out.println("Você deve digitar um núermo inteiro");
+			JOptionPane.showMessageDialog(null, "Você deve digitar um núermo inteiro");
 			return;
 		}
 		
 		long amstrong = calcular_numero_amstrong(numeroStr);
 		
-		System.out.println("Número digitado foi " + numero + " e" + 
+		String msg = "Número digitado foi " + numero + " e" + 
 		  ((numero ==  amstrong) ? " é um " : " não é ") + 
-		  "um número Amstrong");
+		  "um número Amstrong";
+		
+		JOptionPane.showMessageDialog(null, msg);
 	}
 	
 	public Questao3() {}	
